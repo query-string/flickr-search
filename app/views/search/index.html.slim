@@ -1,3 +1,10 @@
-= form_tag search_index_path, method: :get, enforce_utf8: false
-  = text_field_tag :query, params[:query], placeholder: 'Photo name, tags or description', type: :search
-  = submit_tag 'Search', name: nil
+.hero.is-fullheight.is-light
+  .hero-body
+    .container
+      h1.title.is-3= link_to 'FlickrSearch', root_path
+      = form_tag search_index_path, method: :get, enforce_utf8: false
+        .field.has-addons
+          .control.is-expanded
+            = text_field_tag :query, params[:query], placeholder: 'Search for photo by name, description or tags', type: :search, class: 'input is-rounded'
+          .control
+            = submit_tag 'Search', name: nil, class: 'button is-primary is-rounded'
