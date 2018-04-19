@@ -11,6 +11,7 @@
 section.section
   .container
     - if results.any?
-      h2.title.is-5 Search results
+      h2.title.is-5 #{pluralize(results.total_entries, 'photo')} found
       - results.each do |photo|
         .preview= image_tag photo.small(240).source_url
+      = will_paginate results
