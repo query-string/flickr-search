@@ -10,4 +10,7 @@
 
 section.section
   .container
-    h2.title.is-5 Search results
+    - if results.any?
+      h2.title.is-5 Search results
+      - results.each do |photo|
+        .preview= image_tag photo.small(240).source_url
