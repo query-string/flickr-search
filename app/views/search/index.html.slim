@@ -11,7 +11,11 @@
 section.section
   .container
     - if results.any?
-      h2.title.is-5 #{pluralize(results.total_entries, 'photo')} found
+      h2.title.is-5 #{number_with_delimiter(results.total_entries, delimiter: '.')} #{'photo'.pluralize(results.total_entries)} found
       - results.each do |photo|
-        .preview= image_tag photo.small(240).source_url
+        .preview
+          = image_tag photo.medium(500).source_url, class: 'preview__image'
+          span.preview__info
+            strong= photo.title
+          = link_to photo.title, '#', class: 'preview__link'
       = will_paginate results
