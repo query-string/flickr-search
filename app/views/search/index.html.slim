@@ -11,13 +11,16 @@
 section.section
   .container
     - if results.any?
-      h2.title.is-5 #{number_with_delimiter(results.total_entries)} #{'photo'.pluralize(results.total_entries)} found
+      .columns
+        .column
+          h2.title.is-5 Search results
+        .column.has-text-right #{number_with_delimiter(results.total_entries)} #{'photo'.pluralize(results.total_entries)} found
       .results
         - results.each do |photo|
           .preview
             = image_tag photo.small(320).source_url, class: 'preview__image'
             span.preview__info
               i= truncate(photo.title, length: 32)
-            = link_to photo.title, '#', class: 'preview__link'
+            = link_to photo.title, photo.url, target: :blank, class: 'preview__link'
 
-      = will_paginate results
+      = will_paginate results, renderer: BulmaPagination::Rails
