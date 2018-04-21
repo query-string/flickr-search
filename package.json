@@ -4,7 +4,6 @@
   "dependencies": {
     "@rails/webpacker": "^3.2.2",
     "bulma": "^0.6.2",
-    "coffeescript": "1.12.7",
     "muuri": "^0.5.4"
   },
   "devDependencies": {

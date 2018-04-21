@@ -11,11 +11,13 @@
 section.section
   .container
     - if results.any?
+
       .columns
         .column
-          h2.title.is-5 Search results
+          h2#loading.title.is-5 Search results
         .column.has-text-right #{number_with_delimiter(results.total_entries)} #{'photo'.pluralize(results.total_entries)} found
-      .results
+
+      .results#results
         - results.each do |photo|
           .preview
             = image_tag photo.small(320).source_url, class: 'preview__image'
