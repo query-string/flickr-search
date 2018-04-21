@@ -3,35 +3,39 @@
 html
   background: hsl(0, 0%, 96%)
 
-.preview
-  $height: 207px
-  float: left
+.results
   position: relative
-  margin: 0 5px 5px 0
+  min-height: 100px
+  margin-bottom: 17px
+
+.preview
+  position: absolute
+  display: block
   line-height: 0
-  height: $height
-  background: white
+  margin: 2px
   &__image
-    height: $height
-  &__link, &__info
-    height: $height
-    width: 100%
+    width: 282px
+  &__info, &__link
     display: block
     position: absolute
     top: 0
     left: 0
+    line-height: 0
+    width: 100%
+    height: 100%
   &__link
     text-indent: -777em
   &__info
     opacity: 0
     transition: opacity .2s
-    strong
+    background-image: linear-gradient(transparent 65%, rgba(0, 0, 0, .35))
+    i
       position: absolute
-      left: 15px
       bottom: 20px
-      line-height: 0
+      left: 10px
       color: white
+      font-style: normal
+      text-shadow: 0 0 2px black
   &:hover
     .preview__info
       opacity: 1
-      background-image: linear-gradient(transparent 65%, rgba(0, 0, 0, .35))
