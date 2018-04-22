@@ -4,6 +4,8 @@ html
   background: hsl(0, 0%, 96%)
 
 .results
+  max-width: 1152px
+  margin: 0 auto
   position: relative
   margin-bottom: 17px
   opacity: 0
@@ -42,3 +44,18 @@ html
   &:hover
     .preview__info
       opacity: 1
+
+@media screen and (max-width: 1220px)
+  .preview
+    &__image
+      width: 236px
+
+@media screen and (max-width: 640px)
+  .preview
+    &__image
+      width: 292px
+
+@media screen and (max-width: 480px)
+  .preview
+    &__image
+      width: 440px
