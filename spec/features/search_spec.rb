@@ -9,14 +9,14 @@ feature 'Search', :js do
 
     before do
       Flickr.configure { |c| c.api_key = api_key }
-      VCR.use_cassette cassete do
+      VCR.use_cassette cassette do
         visit search_index_path(query: query)
       end
     end
 
     context 'When the query is empty' do
-      let(:query)   { nil }
-      let(:cassete) { 'empty_search' }
+      let(:query)    { nil }
+      let(:cassette) { 'empty_search' }
 
       it 'shows an error message' do
         expect(page.find('h2')).to have_content('Sorry, nothing found for your request')
@@ -27,8 +27,8 @@ feature 'Search', :js do
     end
 
     context 'When API erorr happens' do
-      let(:api_key) { 31337 }
-      let(:cassete) { 'api_error' }
+      let(:api_key)  { 31337 }
+      let(:cassette) { 'api_error' }
 
       it 'shows an error message' do
         expect(page.find('h2')).to have_content('Flickr API is not available at the moment. Please try again later.')
@@ -39,7 +39,7 @@ feature 'Search', :js do
     end
 
     context 'When everything is fine' do
-      let(:cassete) { 'bangkok_search' }
+      let(:cassette) { 'bangkok_search' }
 
       it 'has proper page title' do
         expect(page.find('h2')).to have_content('Search results')
