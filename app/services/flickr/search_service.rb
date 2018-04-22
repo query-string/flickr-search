@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
 module Flickr
-  class SearchService < Service
+  class SearchService
     PER_PAGE = 50
 
     attr_reader :query, :page, :response
+
+    def self.call(*args)
+      new.call(*args)
+    end
 
     def call(attrs)
       @query    = attrs[:query]
