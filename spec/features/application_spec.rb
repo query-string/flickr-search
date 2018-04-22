@@ -8,8 +8,13 @@ feature 'Landing page', :js do
 
     scenario 'Type request and press submit button' do
       page.find('#query').set('Bangkok')
-      page.find_button('Search').click
+
+      VCR.use_cassette 'bangkok_search' do
+        page.find_button('Search').click
+      end
+
       expect(page).to have_current_path(search_index_path(query: 'Bangkok'))
+      expect(page.find('h2')).to have_content('Search results')
     end
   end
 end

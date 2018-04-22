@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest?api_key=c2b5a4582c795703b930409fe96e1699&extras=&format=json&method=flickr.photos.search&nojsoncallback=1&page&per_page=50&sort=relevance&text=Bangkok
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Authorization:
+      - OAuth oauth_consumer_key="c2b5a4582c795703b930409fe96e1699", oauth_nonce="93c49694716bc28814501151dce05af1",
+        oauth_signature="4FkfN0f95paPuttjcFrK4xd%2B394%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1524379146", oauth_token="", oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 22 Apr 2018 06:39:07 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1412'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www-bm143.flickr.gq1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '1'
+      Via:
+      - http/1.1 fts111.flickr.gq1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        e22.ycpi.sgb.yahoo.com (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      Public-Key-Pins-Report-Only:
+      - max-age=2592000; pin-sha256="2fRAUXyxl4A1/XHrKNBmc8bTkzA7y4FB/GLJuNAzCqY=";
+        pin-sha256="2oALgLKofTmeZvoZ1y/fSZg7R9jPMix8eVA6DH4o/q8="; pin-sha256="Gtk3r1evlBrs0hG3fm3VoM19daHexDWP//OCmeeMr5M=";
+        pin-sha256="I/Lt/z7ekCWanjD0Cvj5EqXls2lOaThEA0H2Bg4BT/o="; pin-sha256="JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg=";
+        pin-sha256="SVqWumuteCQHvVIaALrOZXuzVVVeS7f4FGxxu6V+es4="; pin-sha256="UZJDjsNp1+4M5x9cbbdflB779y5YRBcV6Z6rBMLIrO4=";
+        pin-sha256="Wd8xe/qfTwq3ylFNd3IpaqLHZbh2ZNCLluVzmeNkcpw="; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
+        pin-sha256="cAajgxHlj7GTSEIzIYIQxmEloOSoJq7VOaxWHfv72QM="; pin-sha256="dolnbtzEBnELx/9lOEQ22e6OZO/QNb6VSSX2XHA3E7A=";
+        pin-sha256="i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY="; pin-sha256="iduNzFNKpwYZ3se/XV+hXcbUonlLw09QPa6AYUwpu4M=";
+        pin-sha256="lnsM2T/O9/J84sJFdnrpsFp3awZJ+ZZbYpCWhGloaHI="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=";
+        pin-sha256="uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc="; includeSubdomains;
+        report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"photos":{"page":1,"pages":57373,"perpage":50,"total":"2868638","photo":[{"id":"4468378065","owner":"25700967@N05","secret":"7ff651b617","server":"4003","farm":5,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"26879348231","owner":"59394425@N05","secret":"a82b5aa2aa","server":"7297","farm":8,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"35583867336","owner":"29370225@N03","secret":"3de9c40c33","server":"4236","farm":5,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"41097943091","owner":"126043053@N08","secret":"6131369a3a","server":"822","farm":1,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"7047209175","owner":"78666321@N06","secret":"5848fc2f20","server":"7130","farm":8,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"26426303252","owner":"59394425@N05","secret":"0c38b971df","server":"1638","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"24164957372","owner":"50591172@N02","secret":"0b4c8b5e68","server":"1623","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"2889982161","owner":"8565990@N03","secret":"42fe64efb6","server":"3198","farm":4,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"24836233950","owner":"29370225@N03","secret":"4037b0681e","server":"1614","farm":2,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29375449996","owner":"29370225@N03","secret":"c1b212ff27","server":"8205","farm":9,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"9796698663","owner":"65075983@N03","secret":"cbd50fce99","server":"5509","farm":6,"title":"Bangkok.","ispublic":1,"isfriend":0,"isfamily":0},{"id":"41411291682","owner":"126043053@N08","secret":"02797b29fb","server":"871","farm":1,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"24850372574","owner":"97502594@N00","secret":"d04f63c2bf","server":"1703","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"9472261233","owner":"49200373@N02","secret":"7bed61b60d","server":"7402","farm":8,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"16570236694","owner":"50591172@N02","secret":"4487595aa8","server":"5454","farm":6,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25192536603","owner":"97502594@N00","secret":"fb56e342f3","server":"1661","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"30235835131","owner":"29370225@N03","secret":"d170fa0894","server":"5753","farm":6,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"3396373367","owner":"29223345@N06","secret":"4f97283292","server":"3431","farm":4,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"13907992195","owner":"71267357@N06","secret":"a2f66ac40d","server":"3787","farm":4,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25638135933","owner":"97502594@N00","secret":"1dd03c6d01","server":"1678","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"14861780673","owner":"32594277@N04","secret":"515b9c6da5","server":"5585","farm":6,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"16943578523","owner":"40369546@N00","secret":"21c34b7eef","server":"7688","farm":8,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"26760833581","owner":"59394425@N05","secret":"a9ca0fdc7a","server":"7393","farm":8,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25543146240","owner":"97502594@N00","secret":"bf90bbfba3","server":"1712","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"40698841964","owner":"126043053@N08","secret":"ae86b4a3df","server":"877","farm":1,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"41481546082","owner":"126043053@N08","secret":"ffc4f391e8","server":"823","farm":1,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"24677951070","owner":"29370225@N03","secret":"9af8261f6f","server":"1497","farm":2,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"29993122786","owner":"29370225@N03","secret":"7bea5731cc","server":"8130","farm":9,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25082774273","owner":"97502594@N00","secret":"a3a3267edf","server":"1567","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"37384652831","owner":"29370225@N03","secret":"c82a0e6030","server":"4390","farm":5,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25170021219","owner":"97502594@N00","secret":"f46e2f4d63","server":"1632","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"15878798592","owner":"128868738@N07","secret":"412c3b38c1","server":"7490","farm":8,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"20082216804","owner":"134105539@N04","secret":"8e685b2f24","server":"5807","farm":6,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"26855055085","owner":"29370225@N03","secret":"3083ecaf16","server":"7174","farm":8,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"33515214683","owner":"29370225@N03","secret":"ba8861274e","server":"4177","farm":5,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25829905231","owner":"97502594@N00","secret":"76c3fd5ec7","server":"1546","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"28390903909","owner":"29370225@N03","secret":"3653e3e949","server":"4764","farm":5,"title":"bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"10186854253","owner":"33053845@N02","secret":"26402a23a8","server":"8273","farm":9,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25588370292","owner":"97502594@N00","secret":"3b65e97e29","server":"1544","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25969669075","owner":"97502594@N00","secret":"347fa681eb","server":"1578","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25381826434","owner":"97502594@N00","secret":"1bc2bd16f8","server":"1716","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"26204374672","owner":"97502594@N00","secret":"082302d567","server":"1541","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"24970517573","owner":"97502594@N00","secret":"37624229b7","server":"1679","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"26066259182","owner":"97502594@N00","secret":"e6e8dc80bb","server":"1477","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25653420175","owner":"97502594@N00","secret":"34ec3d967f","server":"1455","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25229668039","owner":"97502594@N00","secret":"f1802fd73c","server":"1681","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"5960603797","owner":"57246919@N08","secret":"edf3d7db0c","server":"6139","farm":7,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"24825274213","owner":"97502594@N00","secret":"ee69fd74ce","server":"1670","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25746645652","owner":"97502594@N00","secret":"41e0a48e68","server":"1695","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0},{"id":"25357740630","owner":"97502594@N00","secret":"26f4133013","server":"1677","farm":2,"title":"Bangkok","ispublic":1,"isfriend":0,"isfamily":0}]},"stat":"ok"}'
+    http_version: 
+  recorded_at: Sun, 22 Apr 2018 06:39:07 GMT
+recorded_with: VCR 4.0.0
