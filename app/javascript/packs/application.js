@@ -10,20 +10,23 @@
 import Muuri from 'muuri'
 
 document.addEventListener('DOMContentLoaded', () => {
-  const loading = document.getElementById('loading')
-  loading.textContent = 'Loading search results...'
-})
-
-window.onload = function() {
   const results = document.getElementById('results')
-  const grid = new Muuri(results, {
-    layout: {
-      fillGaps: true
-    }
-  })
 
-  results.classList.add('results__visible')
-  loading.textContent = 'Search results'
-}
+  if (results) {
+    const loading = document.getElementById('loading')
+    loading.textContent = 'Loading search results...'
+
+    window.onload = function() {
+      const grid = new Muuri(results, {
+        layout: {
+          fillGaps: true
+        }
+      })
+
+      results.classList.add('results__visible')
+      loading.textContent = 'Search results'
+    }
+  }
+})
 
 import '../application.sass'
