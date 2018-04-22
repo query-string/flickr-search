@@ -1,23 +1,23 @@
 # frozen_string_literal: true
 require 'rails_helper'
 
-describe Flickr::SearchService do
-  let(:attrs) { { query: 'Bangkok' } }
+describe Flickr::Search do
+  let(:attrs)   { { query: 'Bangkok' } }
+  let(:results) { subject.result }
 
   subject do
     VCR.use_cassette cassette do
-      Flickr::SearchService.(attrs)
+      Flickr::Search.new(attrs).perform
     end
   end
 
   context 'with valid attributes' do
-    let(:results)  { subject[:results] }
 
     context 'default query' do
       let(:cassette) { 'bangkok_search' }
 
       it 'returns no errors' do
-        expect(subject[:errors]).to be_empty
+        expect(subject.fail?).to be_falsy
       end
       it 'returns search results' do
         expect(results.length).to eq 50
@@ -46,14 +46,14 @@ describe Flickr::SearchService do
     context 'no attributes' do
       let(:attrs) { {} }
       it 'returns empty results' do
-        expect(subject[:results]).to be_empty
+        expect(results).to be_empty
       end
     end
 
     context 'empty query' do
       let(:attrs) { { query: nil } }
       it 'returns empty results' do
-        expect(subject[:results]).to be_empty
+        expect(results).to be_empty
       end
     end
   end
@@ -63,10 +63,10 @@ describe Flickr::SearchService do
     let(:cassette) { 'api_error' }
 
     it 'returns no results' do
-      expect(subject[:results]).to be_empty
+      expect(subject.success?).to be_falsy
     end
     it 'returns errors array' do
-      expect(subject[:errors]).to eq ['Flickr API is not available at the moment. Please try again later.']
+      expect(subject.errors).to eq(api: 'Flickr API is not available at the moment. Please try again later.')
     end
   end
 end

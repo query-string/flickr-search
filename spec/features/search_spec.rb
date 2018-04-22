@@ -45,7 +45,7 @@ feature 'Search', :js do
         expect(page.find('h2')).to have_content('Search results')
       end
       it 'displays the number of found photos' do
-        expect(page.find('.columns')).to have_content('2,868,638 photos found')
+        expect(page.find('.columns')).to have_content('2,868,711 photos found')
       end
       it 'has results block' do
         expect(page).to have_css('#results')
@@ -59,7 +59,7 @@ feature 'Search', :js do
 
       scenario 'click photo link' do
         page.find('#results').all('.preview > a').first.click
-        expect(page).to have_current_path('/photos/25700967@N05/4468378065')
+        expect(page).to have_current_path('/photos/30382413@N08/11851195703')
       end
 
       scenario 'click next page' do
