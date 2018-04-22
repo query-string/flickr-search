@@ -2,7 +2,13 @@
 
 class SearchController < ApplicationController
   def index
-    render :index, locals: Flickr::SearchService.(search_params)
+    search = Flickr::Search.new(search_params).perform
+    locals = {
+      results: search.success? ? search.result : [],
+      errors:  search.fail?    ? search.errors : []
+    }
+
+    render :index, locals: locals
   end
 
   private
