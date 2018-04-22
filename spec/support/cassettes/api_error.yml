@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.flickr.com/services/rest?api_key=31337&extras=&format=json&method=flickr.photos.search&nojsoncallback=1&page&per_page=50&sort=relevance&text=Bangkok
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.14.0
+      Authorization:
+      - OAuth oauth_consumer_key="31337", oauth_nonce="6183f7fed778488f151d66e4012ff0a6",
+        oauth_signature="MgbBE9EEQEPiEtmGCKc9It1qeCg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1524379058", oauth_token="", oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 22 Apr 2018 06:37:39 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+      P3p:
+      - policyref="https://policies.yahoo.com/w3c/p3p.xml", CP="CAO DSP COR CUR ADM
+        DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND
+        PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE LOC GOV"
+      X-Content-Type-Options:
+      - nosniff
+      Cache-Control:
+      - private
+      X-Served-By:
+      - www-bm142.flickr.gq1.yahoo.com
+      X-Frame-Options:
+      - SAMEORIGIN
+      Vary:
+      - Accept-Encoding
+      Age:
+      - '0'
+      Via:
+      - http/1.1 fts106.flickr.gq1.yahoo.com (ApacheTrafficServer [cMsSf ]), http/1.1
+        r18.ycpi.sg3.yahoo.net (ApacheTrafficServer [cMsSf ])
+      Server:
+      - ATS
+      Connection:
+      - keep-alive
+      Strict-Transport-Security:
+      - max-age=15552000
+      Expect-Ct:
+      - max-age=31536000, report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-expect-ct-report-only"
+      Public-Key-Pins-Report-Only:
+      - max-age=2592000; pin-sha256="2fRAUXyxl4A1/XHrKNBmc8bTkzA7y4FB/GLJuNAzCqY=";
+        pin-sha256="2oALgLKofTmeZvoZ1y/fSZg7R9jPMix8eVA6DH4o/q8="; pin-sha256="Gtk3r1evlBrs0hG3fm3VoM19daHexDWP//OCmeeMr5M=";
+        pin-sha256="I/Lt/z7ekCWanjD0Cvj5EqXls2lOaThEA0H2Bg4BT/o="; pin-sha256="JbQbUG5JMJUoI6brnx0x3vZF6jilxsapbXGVfjhN8Fg=";
+        pin-sha256="SVqWumuteCQHvVIaALrOZXuzVVVeS7f4FGxxu6V+es4="; pin-sha256="UZJDjsNp1+4M5x9cbbdflB779y5YRBcV6Z6rBMLIrO4=";
+        pin-sha256="Wd8xe/qfTwq3ylFNd3IpaqLHZbh2ZNCLluVzmeNkcpw="; pin-sha256="WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=";
+        pin-sha256="cAajgxHlj7GTSEIzIYIQxmEloOSoJq7VOaxWHfv72QM="; pin-sha256="dolnbtzEBnELx/9lOEQ22e6OZO/QNb6VSSX2XHA3E7A=";
+        pin-sha256="i7WTqTvh0OioIruIfFR4kMPnBqrS2rdiVPl/s2uC/CY="; pin-sha256="iduNzFNKpwYZ3se/XV+hXcbUonlLw09QPa6AYUwpu4M=";
+        pin-sha256="lnsM2T/O9/J84sJFdnrpsFp3awZJ+ZZbYpCWhGloaHI="; pin-sha256="r/mIkG3eEpVdm+u/ko/cwxzOMo1bk4TyHIlByibiA5E=";
+        pin-sha256="uUwZgwDOxcBXrQcntwu+kYFpkiVkOaezL0WYEZ3anJc="; includeSubdomains;
+        report-uri="http://csp.yahoo.com/beacon/csp?src=yahoocom-hpkp-report-only"
+    body:
+      encoding: ASCII-8BIT
+      string: '{"stat":"fail","code":100,"message":"Invalid API Key (Key has invalid
+        format)"}'
+    http_version: 
+  recorded_at: Sun, 22 Apr 2018 06:37:39 GMT
+recorded_with: VCR 4.0.0
