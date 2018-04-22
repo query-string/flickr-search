@@ -16,7 +16,7 @@ section.section
     - else
 
       - if results.empty?
-        h2.title.is-5 Nothing found for this query
+        h2.title.is-5 Sorry, nothing found for your request
 
       - else
         .columns
@@ -30,6 +30,6 @@ section.section
               = image_tag photo.small(320).source_url, class: 'preview__image'
               span.preview__info
                 i= truncate(photo.title, length: 32)
-              = link_to photo.title, photo.url, target: :blank, class: 'preview__link'
+              = link_to photo.title, photo.url, class: 'preview__link'
 
         = will_paginate results, renderer: BulmaPagination::Rails

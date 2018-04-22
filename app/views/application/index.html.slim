@@ -1,5 +1,8 @@
 .hero.is-fullheight.is-light
   .hero-body
     .container
-      h1.title.is-3= link_to 'FlickrSearch', root_path
-      = render 'search'
+      .columns
+        .column.is-narrow
+          h1.title.is-3= link_to 'FlickrSearch', root_path
+        .column
+          = render 'search'
