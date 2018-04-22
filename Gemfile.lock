@@ -69,8 +69,8 @@ GEM
       safe_yaml (~> 1.0.0)
     crass (1.0.4)
     diff-lcs (1.3)
-    dotenv (2.2.2)
     erubi (1.7.1)
+    execjs (2.7.0)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     faraday_middleware (0.12.2)
@@ -81,9 +81,6 @@ GEM
       faraday_middleware (>= 0.8)
       multi_xml (~> 0.4)
       simple_oauth (~> 0.3.1)
-    foreman (0.63.0)
-      dotenv (>= 0.7)
-      thor (>= 0.13.6)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     hashdiff (0.3.7)
@@ -195,13 +192,17 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.3.13)
     temple (0.8.0)
     thor (0.20.0)
     thread_safe (0.3.6)
     tilt (2.0.8)
+    turbolinks (5.1.1)
+      turbolinks-source (~> 5.1)
+    turbolinks-source (5.1.0)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uglifier (4.1.9)
+      execjs (>= 0.3.0, < 3)
     vcr (4.0.0)
     web-console (3.6.0)
       actionview (>= 5.0)
@@ -235,7 +236,6 @@ DEPENDENCIES
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   flickr-objects
-  foreman
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
@@ -245,8 +245,9 @@ DEPENDENCIES
   slim-rails
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
+  turbolinks (~> 5)
   tzinfo-data
+  uglifier (>= 1.3.0)
   vcr
   web-console (>= 3.3.0)
   webmock
