@@ -2,8 +2,6 @@
 
 class SearchController < ApplicationController
   def index
-    render :index, locals: {
-      results: params[:query].present? ? Flickr::SearchService.(params) : []
-    }
+    render :index, locals: Flickr::SearchService.(params)
   end
 end

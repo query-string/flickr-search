@@ -10,19 +10,26 @@
 
 section.section
   .container
-    - if results.any?
+    - if errors.any?
+      h2.title.is-5= errors.first
 
-      .columns
-        .column
-          h2#loading.title.is-5 Search results
-        .column.has-text-right #{number_with_delimiter(results.total_entries)} #{'photo'.pluralize(results.total_entries)} found
+    - else
 
-      .results#results
-        - results.each do |photo|
-          .preview
-            = image_tag photo.small(320).source_url, class: 'preview__image'
-            span.preview__info
-              i= truncate(photo.title, length: 32)
-            = link_to photo.title, photo.url, target: :blank, class: 'preview__link'
+      - if results.empty?
+        h2.title.is-5 Nothing found for this query
 
-      = will_paginate results, renderer: BulmaPagination::Rails
+      - else
+        .columns
+          .column
+            h2#loading.title.is-5 Search results
+          .column.has-text-right #{number_with_delimiter(results.total_entries)} #{'photo'.pluralize(results.total_entries)} found
+
+        .results#results
+          - results.each do |photo|
+            .preview
+              = image_tag photo.small(320).source_url, class: 'preview__image'
+              span.preview__info
+                i= truncate(photo.title, length: 32)
+              = link_to photo.title, photo.url, target: :blank, class: 'preview__link'
+
+        = will_paginate results, renderer: BulmaPagination::Rails
